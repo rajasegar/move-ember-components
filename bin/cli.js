@@ -3,7 +3,6 @@
 "use strict";
 
 const moveComponent = require("../");
-const execa = require("execa");
 
 const componentName = process.argv[2];
 const destination = process.argv[3];
