@@ -13,8 +13,8 @@ const pods: process.argv.includes("--pods");
 const options = {
   componentName,
   destination,
-  dryRun: true,
-  pods: true,
+  dryRun,
+  pods: true, // hard coding pods TODO: remove later
 };
 
 console.log(options);
