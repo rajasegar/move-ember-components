@@ -1,0 +1,23 @@
+{
+  "name": "move-ember-components",
+  "version": "1.0.0",
+  "description": "Move Ember.js components into different folders within app/components",
+  "main": "index.js",
+  "bin": {
+    "move-ember-components": "bin/cli.js",
+    "mec": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rajasegar Chandran <rajasegar.c@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "codemod-cli": "^2.1.0",
+    "ember-template-recast": "^4.1.5",
+    "execa": "^4.0.3",
+    "fs-extra": "^9.0.1"
+  }
+}
