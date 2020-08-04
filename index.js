@@ -71,6 +71,38 @@ module.exports = function (options) {
       .catch((err) => error(err));
   }
 
+  // Moving component style.scss
+  log("\nMoving component style.scss");
+  log("-------------------------");
+
+  let sourceStyle;
+  if (pods) {
+    sourceStyle = componentFolder
+      ? `${componentPath}/${componentFolder}/${componentName}/style.scss`
+      : `${componentPath}/${componentName}/style.scss`;
+  } else {
+    sourceStyle = componentFolder
+      ? `app/templates/components/${componentFolder}/${componentName}.scss`
+      : `app/templates/components/${componentName}.scss`;
+  }
+  const destStyle = `${packagePath}/${componentName}/style.scss`;
+
+  log(sourceStyle);
+  log(destStyle);
+
+  if (!dryRun) {
+    if (fs.existsSync(sourceStyle)) {
+      fse
+        .move(sourceStyle, destStyle)
+        .then(() => {
+          ok(`Success: Component Style ${sourceStyle} moved`);
+        })
+        .catch((err) => error(err));
+    } else {
+      warning(`WARNING: There are no styles for component ${componentName}`);
+    }
+  }
+
   // Moving component tests
   log("\nMoving component tests");
   log("------------------");

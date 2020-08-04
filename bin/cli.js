@@ -20,9 +20,11 @@ const options = {
 moveComponent(options);
 
 // Run codemod
-require("codemod-cli").runTransform(
-  __dirname,
-  "rename-components",
-  `app/components/**/*.hbs --from=${componentName} --to=${destination}`,
-  "hbs"
-);
+if (!dryRun) {
+  require("codemod-cli").runTransform(
+    __dirname,
+    "rename-components",
+    `app/components/**/*.hbs --from=${componentName} --to=${destination}`,
+    "hbs"
+  );
+}
