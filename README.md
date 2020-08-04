@@ -13,6 +13,11 @@ npm i -g move-ember-components
 move-ember-components <source-path> <destination-path>
 ```
 
+Or using npx
+```
+npx move-ember-components <source-path> <destination-path>
+```
+
 You can also use the shorthand version `mec` for the cli
 
 ```

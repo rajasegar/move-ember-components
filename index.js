@@ -38,7 +38,7 @@ module.exports = function (options) {
     fse
       .move(sourceComponent, destComponent)
       .then(() => {
-        ok(`Success: Component ${componentName}.js moved`);
+        ok(`Success: Component ${sourceComponent} moved`);
       })
       .catch((err) => error(err));
   }
@@ -66,7 +66,7 @@ module.exports = function (options) {
     fse
       .move(sourceTemplate, destTemplate)
       .then(() => {
-        ok(`Success: Component Template ${componentName}.hbs moved`);
+        ok(`Success: Component Template ${sourceTemplate} moved`);
       })
       .catch((err) => error(err));
   }
@@ -94,7 +94,7 @@ module.exports = function (options) {
       fse
         .move(sourceTest, destTest)
         .then(() => {
-          ok(`Success: Component Test ${componentName}.hbs moved`);
+          ok(`Success: Component Test ${sourceTest} moved`);
         })
         .catch((err) => error(err));
     } else {
