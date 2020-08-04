@@ -19,12 +19,24 @@ const options = {
 // Move components
 moveComponent(options);
 
+console.log("Running Codemods: ");
+console.log("------------------");
 // Run codemod
 if (!dryRun) {
+  // Run template codemods
   require("codemod-cli").runTransform(
     __dirname,
     "rename-components",
-    `app/components/**/*.hbs --from=${componentName} --to=${destination}`,
+    `app/**/*.hbs   --from=${componentName} --to=${destination}`,
     "hbs"
+  );
+
+  // Run js codemods
+
+  require("codemod-cli").runTransform(
+    __dirname,
+    "rename-in-tests",
+    `tests/**/*.js  --from=${componentName} --to=${destination}`,
+    "js"
   );
 }
