@@ -17,6 +17,12 @@ mec <source-path> <destination-path>
 mec hello-world module-hello-world
 ```
 
+For dry run you can pass in the `--dry-run` or `-d` option
+
+```
+mec hello-world module-hello-world --dry-run
+```
+
 This will move the component `app/components/hello-world` to  `app/components/module-hello-world/hello-world`.
 
 
