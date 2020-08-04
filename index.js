@@ -36,7 +36,7 @@ module.exports = function (options) {
 
   if (!dryRun) {
     fse
-      .copy(sourceComponent, destComponent)
+      .move(sourceComponent, destComponent)
       .then(() => {
         ok(`Success: Component ${componentName}.js moved`);
       })
@@ -64,7 +64,7 @@ module.exports = function (options) {
 
   if (!dryRun) {
     fse
-      .copy(sourceTemplate, destTemplate)
+      .move(sourceTemplate, destTemplate)
       .then(() => {
         ok(`Success: Component Template ${componentName}.hbs moved`);
       })
@@ -92,7 +92,7 @@ module.exports = function (options) {
   if (!dryRun) {
     if (fs.existsSync(sourceTest)) {
       fse
-        .copy(sourceTest, destTest)
+        .move(sourceTest, destTest)
         .then(() => {
           ok(`Success: Component Test ${componentName}.hbs moved`);
         })
