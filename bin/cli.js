@@ -5,7 +5,6 @@
 const moveComponent = require("../");
 const execa = require("execa");
 
-console.log(process.argv);
 const componentName = process.argv[2];
 const destination = process.argv[3];
 const dryRun =
@@ -18,9 +17,13 @@ const options = {
   pods: true, // hard coding pods TODO: remove later
 };
 
-console.log(options);
-
 // Move components
 moveComponent(options);
 
 // Run codemod
+require("codemod-cli").runTransform(
+  __dirname,
+  "rename-components",
+  `app/components/**/*.hbs --from=${componentName} --to=${destination}`,
+  "hbs"
+);
