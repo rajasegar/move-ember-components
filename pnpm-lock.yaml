@@ -3,6 +3,8 @@ dependencies:
   codemod-cli: 2.1.0
   ember-template-recast: 4.1.5
   fs-extra: 9.0.1
+  prompts: 2.3.2
+  walk-sync: 2.2.0
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.10.4:
@@ -1624,6 +1626,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==
+  /ensure-posix-path/1.1.1:
+    dev: false
+    resolution:
+      integrity: sha512-VWU0/zXzVbeJNXvME/5EmLuEj2TauvoaTz6aFYK1Z92JCBlDlZ3Gu0tuGR42kpW1754ywTs+QB0g5TP0oj9Zaw==
   /escalade/3.0.2:
     dev: false
     engines:
@@ -2317,6 +2323,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
+  /kleur/3.0.3:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
   /latest-version/5.1.0:
     dependencies:
       package-json: 6.5.0
@@ -2410,6 +2422,15 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
+  /matcher-collection/2.0.1:
+    dependencies:
+      '@types/minimatch': 3.0.3
+      minimatch: 3.0.4
+    dev: false
+    engines:
+      node: 6.* || 8.* || >= 10.*
+    resolution:
+      integrity: sha512-daE62nS2ZQsDg9raM0IlZzLmI2u+7ZapXBwdoeBUKAYERPDDIc0qNqA8E0Rp2D+gspKR7BgIFP52GeujaGXWeQ==
   /merge-stream/2.0.0:
     dev: false
     resolution:
@@ -2773,6 +2794,15 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-VvivMrbvd2nKkiG38qjULzlc+4Vx4wm/whI9pQD35YrARNnhxeiRktSOhSukRLFNlzg6Br/cJPet5J/u19r/mg==
+  /prompts/2.3.2:
+    dependencies:
+      kleur: 3.0.3
+      sisteransi: 1.0.5
+    dev: false
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-Q06uKs2CkNYVID0VqwfAl9mipo99zkBv/n2JtWY89Yxa3ZabWSrs0e2KTudKVa3peLUvYXMefDqIleLPVUBZMA==
   /pump/3.0.0:
     dependencies:
       end-of-stream: 1.4.4
@@ -3038,6 +3068,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-w/3FEDN94r4JQ9WoYrIr8RqDIPZdyNkdpbK9glFady1CAEyD97XWCv8HFetQO21w81e7h7Nh59iYTyG1mUJftg==
+  /sisteransi/1.0.5:
+    dev: false
+    resolution:
+      integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
   /slash/3.0.0:
     dev: false
     engines:
@@ -3331,6 +3365,17 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
+  /walk-sync/2.2.0:
+    dependencies:
+      '@types/minimatch': 3.0.3
+      ensure-posix-path: 1.1.1
+      matcher-collection: 2.0.1
+      minimatch: 3.0.4
+    dev: false
+    engines:
+      node: 8.* || >= 10.*
+    resolution:
+      integrity: sha512-IC8sL7aB4/ZgFcGI2T1LczZeFWZ06b3zoHH7jBPyHxOtIIz1jppWHjjEXkOFvFojBVAK9pV7g47xOZ4LW3QLfg==
   /wcwidth/1.0.1:
     dependencies:
       defaults: 1.0.3
@@ -3411,3 +3456,5 @@ specifiers:
   codemod-cli: ^2.1.0
   ember-template-recast: ^4.1.5
   fs-extra: ^9.0.1
+  prompts: ^2.3.2
+  walk-sync: ^2.2.0
